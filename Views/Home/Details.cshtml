@@ -1,0 +1,46 @@
+﻿@*
+	Student details page
+*@
+
+@model MVCDemoNetCore.Models.Student
+
+@{
+    ViewData["Title"] = "Details Page";
+}
+
+
+
+<div class="row" style="margin: 0 auto; width: 18rem;">
+
+        @*Bootstrap 示例 -start*@
+        @*<div class="card text-center">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                2 days ago
+            </div>
+        </div>*@
+        @*Bootstrap 示例 -end*@
+        <div class="card h-100 text-center p-0">
+            <h5 class="card-header">@Model.Name</h5>
+            
+            <div class="card-body">
+                <img src="~/images/avator.png" class="card-img-top" style="width:100px" alt="student profile">
+                <p class="card-text mb-0">Student ID: @Model.Id</p>
+                <p class="card-text mb-0">Class Name: @Model.ClassName</p>
+                <p class="card-text mb-0">Email: @Model.Email</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-success">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+
+</div>
